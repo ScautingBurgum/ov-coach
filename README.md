@@ -18,7 +18,7 @@ For this project you will need the following software:
 For the installation of this package you will need to clone this project onto your machine. This can be done with the following command.
 
 ```
-git clone https://github.com/ScautingBurgum/ov-coach-demo.git
+git clone https://github.com/ScautingBurgum/ov-coach.git
 ```
 
 After you've cloned the repository, you can install all dependencies with the following command
@@ -48,7 +48,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/wmellema/docker-laravel/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ScautingBurgum/ov-coach/tags).
 
 ## Authors
 
@@ -56,7 +56,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Jelle vd Heide** - *Primary Developer* - [vanderHeide](https://github.com/vanderHeide)
 * **Wouter Mellema** - *Project Supervisior* - [wmellema](https://github.com/wmellema)
 
-See also the list of [contributors](https://github.com/ScautingBurgum/ov-coach-demo/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ScautingBurgum/ov-coach/graphs/contributors) who participated in this project.
 
 ## License
 
