@@ -3,16 +3,16 @@ import {StyleSheet, Text, View, Button} from 'react-native'
 import Markdown from 'react-native-markdown-renderer'
 import {styles, mdStyle} from './style.js'
 import settings from './settings.json'
-import tree from './tree.json'
+import tree from './finaltree.json'
 
 function replaceVariables (node) {
   const str = settings.primarycontact || ''
-  node.message = node.message.replace(/\$CONTACTPERSOON/g, str)
-  if (node.options) {
-    for (const i of node.options) replaceVariables(i)
-  }
+  node.content = node.content.replace(/\$CONTACTPERSOON/g, str)
+  //if (node.options) {
+    //for (const i of node.options) replaceVariables(i)
+  //}
 }
-replaceVariables(tree)
+//replaceVariables(tree)
 
 export default class App extends Component {
 
@@ -20,23 +20,32 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      node: tree,
-      history: [tree]
+      node: tree[0],
+      history: [tree],
+      json: tree,
     }
 
     this.goToNode = this.goToNode.bind(this)
     this.goBack = this.goBack.bind(this)
   }
-
+  findNode (id){
+    let {node, history, json} = this.state;
+    return json.filter(
+      function(data){
+        return data.id == id;
+      }
+    )[0]
+  }
   goToNode (newNode) {
-    let {node, history} = this.state
+    let {node, history,json} = this.state
     history = history.slice()
-    history[history.indexOf(node) + 1] = newNode
+    newNode = this.findNode(newNode)
+    // history[history.indexOf(node) + 1] = newNode
     this.setState({node: newNode, history})
   }
 
   goBack () {
-    const {node, history} = this.state
+    const {node, history, json} = this.state
     const i = history.indexOf(node)
     if (i && i > 0) {
       this.goToNode(history[i - 1])
@@ -44,23 +53,27 @@ export default class App extends Component {
   }
 
   render () {
-    const {node, history} = this.state
+    const {node, history, json} = this.state
     const buttons = []
-    const backButton = history.indexOf(node) === 0 ? null :
+    //console.log(node.parent)
+    var backButton = null;
+    if(node.parent !== null){
+      backButton =
       <Button
         style={styles.button}
         title="Terug"
-        onPress={this.goBack}
+        onPress={() => this.goToNode(node.parent)}
       />
-
-    if (node.options && node.options instanceof Array) {
-      for (const i of node.options) {
+    }
+    if (node.children && node.children instanceof Array) {
+      for (const i of node.children) {
+        let child = this.findNode(i);
         buttons.push(
           <Button
             style={styles.button}
-            title={i.text}
-            onPress={() => this.goToNode(i)}
-            key={node.options.indexOf(i)}
+            title={child.title}
+            onPress={() => this.goToNode(child.id)}
+            key={child.id}
           />
         )
       }
@@ -70,7 +83,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <View style={styles.messageArea}>
           <Markdown style={mdStyle}>
-            {node.message || ''}
+            {node.content || ''}
           </Markdown>
         </View>
         <View style={styles.buttonGroup}>
