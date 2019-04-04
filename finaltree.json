@@ -11,11 +11,10 @@
   },
   {
     "id": 1,
-    "title": "Bus / trein / tram / metro",
+    "title": "Bus / trein",
     "content": "Maak een keuze",
     "children": [
       3,
-      6,
       7
     ],
     "parent": 0
@@ -23,8 +22,11 @@
   {
     "id": 2,
     "title": "Taxi",
-    "content": "Maak een keuze",
-    "children": [],
+    "content": "Heb je een WMO taxipas?",
+    "children": [
+      16,
+      17
+    ],
     "parent": 0
   },
   {
@@ -55,21 +57,12 @@
     "parent": 3
   },
   {
-    "id": 6,
-    "title": "Ik wil informatie",
-    "content": "Wat wil je weten?",
-    "children": [],
-    "parent": 1
-  },
-  {
     "id": 7,
     "title": "Ik ben onderweg en heb een probleem",
     "content": "Waar ben je nu?",
     "children": [
       8,
       9,
-      10,
-      11,
       12,
       13
     ],
@@ -90,24 +83,13 @@
     "parent": 7
   },
   {
-    "id": 10,
-    "title": "Ik ben in de tram",
-    "content": "",
-    "children": [],
-    "parent": 7
-  },
-  {
-    "id": 11,
-    "title": "Ik ben in de metro",
-    "content": "",
-    "children": [],
-    "parent": 7
-  },
-  {
     "id": 12,
     "title": "Ik ben bij een halte",
     "content": "",
-    "children": [],
+    "children": [
+      18,
+      19
+    ],
     "parent": 7
   },
   {
@@ -130,5 +112,33 @@
     "content": "Bel je [contactpersoon](tel:$CONTACTPERSOON)",
     "children": [],
     "parent": 5
+  },
+  {
+    "id": 16,
+    "title": "Ik heb een WMO taxi pas",
+    "content": "Op de taxipas staan instructies om een taxi te bestellen.",
+    "children": [],
+    "parent": 2
+  },
+  {
+    "id": 17,
+    "title": "Ik heb geen WMO taxi pas",
+    "content": "Welke taxi wil je gebruiken?",
+    "children": [],
+    "parent": 2
+  },
+  {
+    "id": 18,
+    "title": "De bus is te laat",
+    "content": "",
+    "children": [],
+    "parent": 12
+  },
+  {
+    "id": 19,
+    "title": "Ik heb de bus gemist",
+    "content": "Op de halte kun je lezen wanneer de volgende komt. mischien is het handig om je [contactpersoon](tel:$CONTACTPERSOON) te bellen om te zeggen dat je later komt.",
+    "children": [],
+    "parent": 12
   }
 ]
