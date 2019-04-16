@@ -115,14 +115,14 @@
   },
   {
     "id": 16,
-    "title": "Ik heb een WMO taxi pas",
+    "title": "Ik heb een WMO taxipas",
     "content": "Op de taxipas staan instructies om een taxi te bestellen.",
     "children": [],
     "parent": 2
   },
   {
     "id": 17,
-    "title": "Ik heb geen WMO taxi pas",
+    "title": "Ik heb geen WMO taxipas",
     "content": "Welke taxi wil je gebruiken?",
     "children": [],
     "parent": 2

@@ -39,41 +39,93 @@ export default class App extends Component {
       settingsToggle: false,
       contact: settings.primarycontact,
       oldContact: settings.primarycontact,
-      volume: 0.5,
+      volume: 0,
       soundObject: null,
+      asrc: null,
+      asrcModifier: 0,
     }
 
     this.goToNode = this.goToNode.bind(this)
     this.handleContactInput = this.handleContactInput.bind(this)
     this.handleVolumeInput = this.handleVolumeInput.bind(this)
     this.setAudio = this.setAudio.bind(this)
+    this.audioContinue = this.audioContinue.bind(this)
 
     //this.toggleSettings = this.toggleSettings.bind(this)//
     //this.goBack = this.goBack.bind(this)
   }
   // audio invoer
-  async setAudio(asrc) {
+  async setAudio(i) {
+    //console.log('load' + this.state.soundObject)
     this.state.soundObject = new Audio.Sound();
-    await this.state.soundObject.loadAsync(asrc);
-    await this.state.soundObject.setVolumeAsync(this.state.volume)
+    if (this.state.soundObject.isLoaded) {
+      this.state.soundObject.unloadAsync()
+    }
+    try {
+      await this.state.soundObject.loadAsync(audio[i]);
+      await this.state.soundObject.setVolumeAsync(this.state.volume)
+    } catch (error) {
+      console.log(error)
+    }
+    //console.log('loaded' + this.state.soundObject)
+  }
+  async playAudio(i) {
+    //console.log('play')
+    try {
+      await this.setAudio(i)
+      await this.state.soundObject.playAsync();
+      this.state.soundObject.setOnPlaybackStatusUpdate(this._onPlaybackStatusUpdate);
+    } catch (error) {
+      console.log(error)
+    }
   }
 
-  async playAudio (asrc) {
-    if(this.state.audioToggle !== true ) {
-      try {
-        await this.setAudio(asrc)
-        await this.state.soundObject.playAsync();
-      } catch (error) {
-        console.log(error)
+  _onPlaybackStatusUpdate = playbackStatus => {
+    if (playbackStatus.didJustFinish) {
+      this.state.asrcModifier += 1
+      console.log(this.state.asrc[this.state.asrcModifier])
+      if (this.state.asrc[this.state.asrcModifier]) {
+          x = this.state.asrc[this.state.asrcModifier]
+          console.log('x is ' + x)
+          //this.setAudio(x)
+          this.playAudio(x)
+      } else {
+        this.state.asrcModifier = 0
+        this.state.audioToggle = false
+        //console.log('complete')
       }
+    }
+  }
+  async stopAudio() {
+    if (this.state.audioToggle) {
+      if (this.state.soundObject.isLoaded !== null) {
+        try {
+          await this.state.soundObject.stopAsync();
+        } catch (error) {
+          console.log(error)
+        }
+        //console.log('stopped')
+      }
+    }
+    this.state.asrcModifier = 0
+    this.setState({audioToggle: false})
+  }
+
+  async toggleAudio (asrc) {
+    if(this.state.audioToggle !== true ) {
+      //console.log('started')
+      this.state.asrc = asrc
+      this.playAudio(asrc[0])
       this.state.audioToggle = true
     } else {
-      try {
-        await this.state.soundObject.stopAsync();
-      } catch (error) {
-        console.log(error)
+      this.stopAudio()
+    }
+  }
+  async audioContinue() {
+    if (this.state.node.children) {
+      for (i in this.state.node.children) {
+
       }
-      this.state.audioToggle = false
     }
   }
   toggleSettings() {
@@ -116,10 +168,12 @@ export default class App extends Component {
     //history = history.slice()
     newNode = this.findNode(newNode)
     // history[history.indexOf(node) + 1] = newNode
+    this.stopAudio()
     this.setState({node: newNode})
-    if(this.state.audioToggle == true ) {
+
+    /*if(this.state.audioToggle == true ) {
       this.playAudio()
-    }
+    }*/
   }
 
   /*goBack () {
@@ -158,14 +212,20 @@ export default class App extends Component {
       style={styles.icons}
       color='#fff'
       />
-    var audioId = 'text'+this.state.node.id
-    if(this.state.volume !== 0 && typeof audio[audioId] !== 'undefined'){
+    var audioId = new Array('text'+this.state.node.id)
+    if (this.state.node.children) {
+      for (i in this.state.node.children) {
+        audioId.push('title'+this.state.node.children[i])
+      }
+    }
+    if(this.state.volume !== 0 && typeof audio[audioId[0]] !== 'undefined'){
       audioButton =
       <MaterialCommunityIcons
         name={'voice'}
         style={styles.icons}
-        onPress ={() => this.playAudio(audio[audioId])}
+        onPress ={() => this.toggleAudio(audioId)}
       />
+      this.setAudio(audioId[0])
     }
     var settingsButton =
     <FontAwesome
@@ -181,9 +241,9 @@ export default class App extends Component {
     />
     var debugButton =
     <Button
-      style={styles.button}
+      style={styles.buttonMarked}
       title="debug"
-      onPress ={() => this.debug()}
+      onPress ={() => this.audioContinue()}
     />
     if (node.children && node.children instanceof Array) {
       for (const i of node.children) {
@@ -261,8 +321,8 @@ export default class App extends Component {
         {this.state.settingsToggle && (
         <View style={styles.buttonGroup}>
           {contactInput}
-          {volumeSlider}
-          {/*debugButton*/}
+          {/*volumeSlider}
+          {debugButton*/}
         </View>
         )}
         {this.state.settingsToggle && (

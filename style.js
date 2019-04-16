@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
-    width: '100%'
+    width: '100%',
+
   },
   backButtonGroup: {
     flexGrow: 1,
@@ -40,11 +41,21 @@ const styles = StyleSheet.create({
     //width: '90%'
   },
   button: {
-    flexGrow: 1, //
+    //flexGrow: 1, //
     //flexShrink: 0, //
     minHeight: 200, //
     fontSize: 17,
     margin: 5,
+  },
+  buttonMarked: {
+    //flexGrow: 1, //
+    //flexShrink: 0, //
+    minHeight: 200, //
+    fontSize: 17,
+    color: 'red',
+    margin: 5,
+    borderRadius: 10, //
+    borderColor: 'red', //
   },
   inputField: {
     //flexDirection: 'row',
