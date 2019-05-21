@@ -13,10 +13,10 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-wildcard": "^5.0.0",
-    "expo": "^31.0.2",
+    "expo": "^32.0.0",
     "punycode": "^2.1.1",
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "^0.57.7",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-fontawesome": "^6.0.1",
     "react-native-markdown-renderer": "^3.2.8",
     "react-native-sound": "^0.10.12"
