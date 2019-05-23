@@ -5,7 +5,7 @@
     "content": "Welkom bij de OV-coach! Waarover heb je een vraag?",
     "children": [
       1,
-      2
+      22
     ],
     "parent": null
   },
@@ -16,16 +16,6 @@
     "children": [
       3,
       7
-    ],
-    "parent": 0
-  },
-  {
-    "id": 2,
-    "title": "Taxi",
-    "content": "Heb je een WMO taxipas?",
-    "children": [
-      16,
-      17
     ],
     "parent": 0
   },
@@ -71,8 +61,12 @@
   {
     "id": 8,
     "title": "Ik ben in de bus",
-    "content": "",
-    "children": [],
+    "content": "Wat is het probleem?",
+    "children": [
+      20,
+      21,
+      29
+    ],
     "parent": 7
   },
   {
@@ -88,15 +82,19 @@
     "content": "",
     "children": [
       18,
-      19
+      19,
+      26
     ],
     "parent": 7
   },
   {
     "id": 13,
     "title": "Ik ben op het station",
-    "content": "",
-    "children": [],
+    "content": "Wat is je vraag?",
+    "children": [
+      27,
+      28
+    ],
     "parent": 7
   },
   {
@@ -114,24 +112,13 @@
     "parent": 5
   },
   {
-    "id": 16,
-    "title": "Ik heb een WMO taxipas",
-    "content": "Op de taxipas staan instructies om een taxi te bestellen.",
-    "children": [],
-    "parent": 2
-  },
-  {
-    "id": 17,
-    "title": "Ik heb geen WMO taxipas",
-    "content": "Welke taxi wil je gebruiken?",
-    "children": [],
-    "parent": 2
-  },
-  {
     "id": 18,
-    "title": "De bus is te laat",
-    "content": "",
-    "children": [],
+    "title": "De bus is te laat.",
+    "content": "Je kunt op [9292.nl](http://9292.nl/) kijken of deze nog komt.",
+    "children": [
+      24,
+      25
+    ],
     "parent": 12
   },
   {
@@ -140,5 +127,77 @@
     "content": "Op de halte kun je lezen wanneer de volgende komt. mischien is het handig om je [contactpersoon](tel:$CONTACTPERSOON) te bellen om te zeggen dat je later komt.",
     "children": [],
     "parent": 12
+  },
+  {
+    "id": 20,
+    "title": "Ik heb mijn halte gemist.",
+    "content": "Geen nood, dat kan gebeuren. Het eerste wat je doet is op de stop-knop drukken zodat de bus stopt bij de volgende halte. Vaak is de deze halte op loopafstand en kan je gewoon terug lopen naar de halte waar je moet zijn. Is de volgende halte te ver verwijdert, dan wacht je bij de halte aan de overkant op de bus die je weer terugbrengt naar de juiste halte. Heb je een afspraak, laat dan even weten dat je bent verlaat.\n\nZit je op de snelweg, dan is het niet mogelijk om terug te lopen. Stap dan alsnog uit bij de volgende halte en plan dán een nieuwe route via [9292.nl](http://9292.nl/). \n",
+    "children": [],
+    "parent": 8
+  },
+  {
+    "id": 21,
+    "title": "De buschauffeur volgt niet de standaard route. Wat nu?",
+    "content": "Allereerst is het belangrijk om niet in paniek te raken. het kan gebeuren dat je chauffeur afwijkt van de standaard route vanwege wegwerkzaamheden of iets vergelijkbaars. Vaak wordt dit van te voren aangegeven op de website van je vervoerder. [9292.nl](http://9292.nl/) houdt dit vaak ook bij. Ook kun je ten allen tijde naar de buschauffeur stappen en vragen waarom hij een andere route rijdt. Lukt dit niet, stap je het best uit bij de volgende halte en plan je een nieuwe route op [9292.nl](http://9292.nl/). Neem ook even contact op met je [contactpersoon](tel:$CONTACTPERSOON) en laat weten dat je later bent als je een afspraak hebt.",
+    "children": [],
+    "parent": 8
+  },
+  {
+    "id": 22,
+    "title": "Ik heb vragen over mijn ov-chipkaart.",
+    "content": "Wat wil je weten?\n\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)",
+    "children": [
+      23
+    ],
+    "parent": 0
+  },
+  {
+    "id": 23,
+    "title": "Je vraagt je af of je voldoende saldo hebt. ",
+    "content": "Het minimum instaptarief voor de bus is 4 euro. Als je in hebt kunnen checken, dan weet je zeker dat je ook uit kunt checken. Het kan wel zijn dat je meer moet betalen dan dat er op je ov-chipkaart staat. Dit is niet erg. Het enige wat je vóór de volgende keer moet doen, is je saldo opladen.\nDit kun je doen op verschillende plekken. Voor een oplaadpunt bij jouw in de buurt kijk je op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)\n",
+    "children": [],
+    "parent": 22
+  },
+  {
+    "id": 24,
+    "title": "Je bus komt niet",
+    "content": "Het eerste wat je kunt doen, is kijken op [9292.nl](http://9292.nl/) om te zien of er een storing is. Is deze er niet, dan kan het zijn dat je bus al langs is geweest. Plan alvast een volgende reis in. Heb je een afspraak met iemand? Zorg dan dat je diegene op de hoogte stelt.",
+    "children": [],
+    "parent": 18
+  },
+  {
+    "id": 25,
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
+    "children": [],
+    "parent": 18
+  },
+  {
+    "id": 26,
+    "title": "Er zit een zak over het haltebord heen",
+    "content": "Het kan voorkomen dat een route wordt aangepast vanwege werkzaamheden of iets vergelijkbaars. Vaak laat de busdienst dit weten door een witte zak over het haltebord te plaatsen. Hierop staat onder andere tot wanneer de halte is vervallen. Om een nieuwe reis te plannen, ga je naar [9292.nl](http://9292.nl/). Deze geeft alternatieven aan als je op een adres zoekt. ",
+    "children": [],
+    "parent": 12
+  },
+  {
+    "id": 27,
+    "title": "Waar kan ik vinden waar en wanneer mijn trein aankomt.",
+    "content": "Op ieder station staan borden waarop de perrons en de treintijden staan aangegeven. Hier kun je opzoeken hoe laat je trein vertrekt en van welk perron.\n\nOp grote treinstations zijn vaak informatiekiosken te vinden. Hier kun je vragen stellen over jouw reis. ",
+    "children": [],
+    "parent": 13
+  },
+  {
+    "id": 28,
+    "title": "Ik heb last van de drukte",
+    "content": "Stations zijn vaak knooppunten voor reizigers en kunnen dus heel druk zijn. Focus je op de zaken die er toe doen, namelijk: waar moet je naartoe en waar haal je je informatie vandaan als je dit niet weet. \n\nSta je eenmaal op de juiste plek, sluit je even af van de mensen om je heen en zet bijvoorbeeld even een muziekje op. Zet je muziek niet op de hoogste volume-stand, want je wilt eventuele omroepberichten niet missen",
+    "children": [],
+    "parent": 13
+  },
+  {
+    "id": 29,
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
+    "children": [],
+    "parent": 8
   }
 ]
