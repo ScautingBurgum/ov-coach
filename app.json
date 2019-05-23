@@ -2,8 +2,8 @@
   "expo": {
     "name": "ov-coach-new",
     "slug": "ov-coach-new",
+    "sdkVersion": "32.0.0",
     "privacy": "unlisted",
-    "sdkVersion": "31.0.0",
     "platforms": [
       "ios",
       "android"
@@ -24,6 +24,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android":{
+      "versionCode":2,
+      "package":"com.scauting.ovcoach"
     }
   }
 }
