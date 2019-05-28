@@ -47,16 +47,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     margin: 5,
   },
-  buttonMarked: {
-    //flexGrow: 1, //
-    //flexShrink: 0, //
-    minHeight: 200, //
-    fontSize: 17,
-    color: 'red',
-    margin: 5,
-    borderRadius: 10, //
-    borderColor: 'red', //
-  },
   inputField: {
     //flexDirection: 'row',
     //flexGrow: 1,
@@ -92,6 +82,7 @@ const styles = StyleSheet.create({
 
 const mdStyle = StyleSheet.create({
   text: {
+    textAlign: 'center',
     fontSize: 20
   }
 })

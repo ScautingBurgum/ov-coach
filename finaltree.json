@@ -79,7 +79,7 @@
   {
     "id": 12,
     "title": "Ik ben bij een halte",
-    "content": "",
+    "content": "Wat is het probleem?",
     "children": [
       18,
       19,
@@ -114,7 +114,7 @@
   {
     "id": 18,
     "title": "De bus is te laat.",
-    "content": "Je kunt op [9292.nl](http://9292.nl/) kijken of deze nog komt.",
+    "content": "Het kan natuurlijk gebeuren dat een bus een paar minuten te laat komt, als de bus erg laat is kun je op [9292.nl](http://9292.nl/) kijken of deze nog komt en hoe laat deze komt.",
     "children": [
       24,
       25
@@ -145,7 +145,7 @@
   {
     "id": 22,
     "title": "Ik heb vragen over mijn ov-chipkaart.",
-    "content": "Wat wil je weten?\n\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)",
+    "content": "Wat wil je weten?\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)",
     "children": [
       23
     ],
