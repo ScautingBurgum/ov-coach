@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react'
-import {StyleSheet, Text, TextInput, View, Button, ScrollView, Slider} from 'react-native'
+import {StyleSheet, Text, TextInput, View, Button, ScrollView, Slider, AsyncStorage, BackHandler} from 'react-native'
 import Markdown from 'react-native-markdown-renderer'
 import { Audio } from 'expo'
 //import Sound from 'react-native-sound'
@@ -13,8 +13,12 @@ import audio from './assets/audio/index.js'
 //import FontAwesome, { Icons, IconTypes } from 'react-native-fontawesome';
 import { AntDesign, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
-function replaceVariables (node) {
-  const str = settings.primarycontact || ''
+async function replaceVariables (node) {
+  //const str = settings.primarycontact || ''
+  const str = await AsyncStorage.getItem('contact')
+  if (str == null) {
+    str = "06-12345678"
+  }
   for(i in tree) {
     tree[i].content = tree[i].content.replace(/\$CONTACTPERSOON/g, str)
   }
@@ -35,8 +39,8 @@ export default class App extends Component {
       json: tree,
       audioToggle: false,
       settingsToggle: false,
-      contact: settings.primarycontact,
-      oldContact: settings.primarycontact,
+      //contact: settings.primarycontact,
+      //oldContact: settings.primarycontact,
       volume: 0.5,
       soundObject: null,
       asrc: null,
@@ -49,9 +53,46 @@ export default class App extends Component {
     this.handleVolumeInput = this.handleVolumeInput.bind(this)
     this.setAudio = this.setAudio.bind(this)
     this.audioContinue = this.audioContinue.bind(this)
+    this.pullData = this.pullData.bind(this)
+    this. handleBackPress = this.handleBackPress.bind(this)
 
     //this.toggleSettings = this.toggleSettings.bind(this)//
     //this.goBack = this.goBack.bind(this)
+  }
+
+  componentDidMount() {
+    this.pullData();
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
+  };
+
+  handleBackPress() {
+    let {node,json} = this.state
+    if (this.state.settingsToggle == true) {
+      this.toggleSettings()
+      return true;
+    }
+    else if (node.id !== 0) {
+      this.goToNode(node.parent);
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  async pullData() {
+    try {
+      const value = await AsyncStorage.getItem('contact');
+       this.state.contact = value;
+       this.state.oldContact = value; //Hier
+    } catch (error) {
+      console.error(error);
+    }
+    try {
+      const value = await AsyncStorage.getItem('volume');
+       this.state.volume = value;
+    } catch (error) {
+      console.error(error);
+    }
   }
   // audio invoer
   async setAudio(i) {
@@ -62,7 +103,7 @@ export default class App extends Component {
     }
     try {
       await this.state.soundObject.loadAsync(audio[i]);
-      await this.state.soundObject.setVolumeAsync(this.state.volume)
+      await this.state.soundObject.setVolumeAsync(this.state.volume * 1)
     } catch (error) {
       console.log(error)
     }
@@ -84,7 +125,6 @@ export default class App extends Component {
       if (playbackStatus.didJustFinish) {
         this.state.asrcModifier += 1
         if (audio[this.state.asrc[this.state.asrcModifier]]) {
-          console.log(this.state.asrc[this.state.asrcModifier])
           x = this.state.asrc[this.state.asrcModifier]
           //this.setAudio(x)
           this.playAudio(x)
@@ -133,13 +173,14 @@ export default class App extends Component {
     if(this.state.settingsToggle !== true ) {
       this.setState({settingsToggle: true})
     } else {
-      this.setState({settingsToggle: false})
       this.replaceVariables(this.state.json)
+      this.setState({settingsToggle: false})
     }
   }
   replaceVariables(node) {
     const str = this.state.contact || ''
     const old = this.state.oldContact || ''
+    //AsyncStorage.setItem('contact', this.state.contact)
     for(i in node) {
       node[i].content = tree[i].content.replace(/\$CONTACTPERSOON/g, str)
       node[i].content = tree[i].content.replace(old, str)
@@ -151,7 +192,7 @@ export default class App extends Component {
     console.log('audio', this.state.audioToggle)
     console.log('settings', this.state.settingsToggle)
     console.log('contact', this.state.contact)
-    console.log('old', this.state.oldContact)
+    console.log('oldContact', this.state.oldContact)
     console.log('volume', this.state.volume)
     console.log('asrc', this.state.asrc)
     console.log('asrcModifier', this.state.asrcModifier)
@@ -190,17 +231,19 @@ export default class App extends Component {
 
   handleContactInput(inp) {
     this.setState({contact: inp})
-    settings.primarycontact = inp
+    AsyncStorage.setItem('contact', inp).done()
   }
   handleVolumeInput(inp) {
     this.setState({volume: inp})
-    this.state.soundObject.setVolumeAsync(inp)
+    if (this.state.soundObject !== null) {
+      this.state.soundObject.setVolumeAsync(inp)
+    }
+    AsyncStorage.setItem('volume', String(inp) ).done()
   }
 
   render () {
     const {node, json} = this.state
     const buttons = []
-    //console.log(node.parent)
     var backButton = null;
     if(node.parent !== null){
       backButton =
@@ -294,6 +337,7 @@ export default class App extends Component {
         onChangeText = {this.handleContactInput}
       />
     </View>
+    var vol = this.state.volume * 1
     var volumeSlider =
     <View style={styles.buttonGroup}>
       <Text style={styles.text}>
@@ -303,7 +347,7 @@ export default class App extends Component {
       <FontAwesome  name={'volume-down'}  style={styles.icons}/>
       <Slider
         style={styles.slider}
-        value={this.state.volume}
+        value={vol}
         step={0.05}
         onSlidingComplete={this.handleVolumeInput}
       />
@@ -343,7 +387,7 @@ export default class App extends Component {
         <View style={styles.buttonGroup}>
           {contactInput}
           {volumeSlider}
-          {debugButton}
+          {/*debugButton*/}
         </View>
         )}
         {this.state.settingsToggle && (
