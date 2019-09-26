@@ -1,22 +1,17 @@
 import React, {Component, Fragment} from 'react'
 import {StyleSheet, Text, TextInput, View, Button, ScrollView, Slider, AsyncStorage, BackHandler} from 'react-native'
 import Markdown from 'react-native-markdown-renderer'
-import { Audio } from 'expo'
-//import Sound from 'react-native-sound'
+import { Audio } from 'expo-av'
 import {styles, mdStyle} from './style.js'
 import settings from './settings.json'
 import tree from './finaltree.json'
 import audio from './assets/audio/index.js'
-//import { library } from '@fortawesome/fontawesome-svg-core'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faIgloo } from '@fortawesome/free-solid-svg-icons'
-//import FontAwesome, { Icons, IconTypes } from 'react-native-fontawesome';
 import { AntDesign, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
 async function replaceVariables (node) {
   //const str = settings.primarycontact || ''
-  const str = await AsyncStorage.getItem('contact')
-  if (str == null) {
+  let str = await AsyncStorage.getItem('contact')
+  if (str == null || str == "") {
     str = "06-12345678"
   }
   for(i in tree) {
@@ -89,7 +84,9 @@ export default class App extends Component {
     }
     try {
       const value = await AsyncStorage.getItem('volume');
+      if(value !== null) {
        this.state.volume = value;
+      }
     } catch (error) {
       console.error(error);
     }
@@ -178,12 +175,19 @@ export default class App extends Component {
     }
   }
   replaceVariables(node) {
-    const str = this.state.contact || ''
-    const old = this.state.oldContact || ''
+    let str = this.state.contact || ''
+    let old = this.state.oldContact || ''
     //AsyncStorage.setItem('contact', this.state.contact)
-    for(i in node) {
-      node[i].content = tree[i].content.replace(/\$CONTACTPERSOON/g, str)
-      node[i].content = tree[i].content.replace(old, str)
+    if(str == null || str == "") {
+      str = "0612345678"
+    }
+    if(old == null || old == "") {
+      old = "0612345678"
+    } else {
+      for(i in node) {
+        node[i].content = tree[i].content.replace(/\$CONTACTPERSOON/g, str)
+        node[i].content = tree[i].content.replace(old, str)
+      }
     }
     this.state.oldContact = str
   }

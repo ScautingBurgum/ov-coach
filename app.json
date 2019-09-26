@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ov-coach-new",
-    "slug": "ov-coach-new",
-    "sdkVersion": "32.0.0",
+    "name": "ov-reiscoach",
+    "slug": "ov-reiscoach",
+    "sdkVersion": "34.0.0",
     "privacy": "unlisted",
     "platforms": [
       "ios",
@@ -23,11 +23,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier":"com.scauting.ovreiscoach"
     },
     "android":{
-      "versionCode":2,
-      "package":"com.scauting.ovcoach"
+      "versionCode":1,
+      "package":"com.scauting.ovreiscoach"
     }
   }
 }

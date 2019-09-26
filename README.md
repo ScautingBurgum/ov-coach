@@ -1,6 +1,6 @@
 # OV-Coach
 
-This project is being developed for the municipality of (INSERT HERE) to help people with mental dissabilities traverse the public transport system in holland
+This project is being developed for the municipality of tytsjerksteradiel to help people with mental dissabilities traverse the public transport system in the Netherlands
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ After you've cloned the repository, you can install all dependencies with the fo
 ```
 yarn
 ```
-This will install all dependencies needed to run the app. 
+This will install all dependencies needed to run the app.
 
 If everything gets installed correctly (you can ignore all warnings) you can run the following command in order to start the expo server
 

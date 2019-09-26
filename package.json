@@ -9,17 +9,15 @@
     "prep": "node assets/audio/prepareAudio.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.15",
-    "@fortawesome/free-solid-svg-icons": "^5.7.2",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-wildcard": "^5.0.0",
-    "expo": "^32.0.0",
+    "expo": "^34.0.1",
+    "expo-av": "^6.0.0",
+    "expo-file-system": "^6.0.2",
     "punycode": "^2.1.1",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-fontawesome": "^6.0.1",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-markdown-renderer": "^3.2.8",
-    "react-native-sound": "^0.10.12"
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
