@@ -12,7 +12,7 @@ async function replaceVariables (node) {
   //const str = settings.primarycontact || ''
   let str = await AsyncStorage.getItem('contact')
   if (str == null || str == "") {
-    str = "06-12345678"
+    str = "0612345678"
   }
   for(i in tree) {
     tree[i].content = tree[i].content.replace(/\$CONTACTPERSOON/g, str)
