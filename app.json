@@ -1,20 +1,20 @@
 {
   "expo": {
-    "name": "ov-coach-new",
-    "slug": "ov-coach-new",
-    "privacy": "public",
-    "sdkVersion": "31.0.0",
+    "name": "ov-reiscoach",
+    "slug": "ov-reiscoach",
+    "sdkVersion": "34.0.0",
+    "privacy": "unlisted",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#001828"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +23,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier":"com.scauting.ovreiscoach",
+      "icon": "./assets/iosicon.png"
+    },
+    "android":{
+      "versionCode":2,
+      "package":"com.scauting.ovreiscoach"
     }
   }
 }

@@ -1,0 +1,269 @@
+[
+  {
+    "id": 0,
+    "title": "Root",
+    "content": "Welkom bij de OV-Reiscoach! Waarover heb je een vraag?",
+    "children": [
+      1,
+      22
+    ],
+    "parent": null
+  },
+  {
+    "id": 1,
+    "title": "Bus / trein",
+    "content": "Maak een keuze",
+    "children": [
+      3,
+      7
+    ],
+    "parent": 0
+  },
+  {
+    "id": 3,
+    "title": "Ik wil mijn reis plannen",
+    "content": "Hoe wil je je reis plannen?",
+    "children": [
+      4,
+      5
+    ],
+    "parent": 1
+  },
+  {
+    "id": 4,
+    "title": "Online",
+    "content": "Plan je reis op [9292.nl](http://9292.nl/)",
+    "children": [],
+    "parent": 3
+  },
+  {
+    "id": 5,
+    "title": "Telefonisch",
+    "content": "Bel naar [0900 9292](tel:09009292)",
+    "children": [
+      14,
+      15
+    ],
+    "parent": 3
+  },
+  {
+    "id": 7,
+    "title": "Ik ben onderweg en heb een probleem",
+    "content": "Waar ben je nu?",
+    "children": [
+      8,
+      9,
+      12,
+      13
+    ],
+    "parent": 1
+  },
+  {
+    "id": 8,
+    "title": "Ik ben in de bus",
+    "content": "Wat is het probleem?",
+    "children": [
+      20,
+      21,
+      29
+    ],
+    "parent": 7
+  },
+  {
+    "id": 9,
+    "title": "Ik ben in de trein",
+    "content": "Wat wil je weten?",
+    "children": [
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "parent": 7
+  },
+  {
+    "id": 12,
+    "title": "Ik ben bij een halte",
+    "content": "Wat is het probleem?",
+    "children": [
+      18,
+      19,
+      26
+    ],
+    "parent": 7
+  },
+  {
+    "id": 13,
+    "title": "Ik ben op het station",
+    "content": "Wat is je vraag?",
+    "children": [
+      27,
+      28
+    ],
+    "parent": 7
+  },
+  {
+    "id": 14,
+    "title": "Gelukt",
+    "content": "Einde",
+    "children": [],
+    "parent": 5
+  },
+  {
+    "id": 15,
+    "title": "Niet gelukt",
+    "content": "Bel je [contactpersoon](tel:$CONTACTPERSOON)",
+    "children": [],
+    "parent": 5
+  },
+  {
+    "id": 18,
+    "title": "De bus is te laat.",
+    "content": "Het kan natuurlijk gebeuren dat een bus een paar minuten te laat komt, als de bus erg laat is kun je op [9292.nl](http://9292.nl/) kijken of deze nog komt en hoe laat deze komt.",
+    "children": [
+      24,
+      25
+    ],
+    "parent": 12
+  },
+  {
+    "id": 19,
+    "title": "Ik heb de bus gemist",
+    "content": "Op de halte kun je lezen wanneer de volgende komt. mischien is het handig om je [contactpersoon](tel:$CONTACTPERSOON) te bellen om te zeggen dat je later komt.",
+    "children": [],
+    "parent": 12
+  },
+  {
+    "id": 20,
+    "title": "Ik heb mijn halte gemist.",
+    "content": "Geen nood, dat kan gebeuren. Het eerste wat je doet is op de stop-knop drukken zodat de bus stopt bij de volgende halte. Vaak is de deze halte op loopafstand en kan je gewoon terug lopen naar de halte waar je moet zijn. Is de volgende halte te ver verwijdert, dan wacht je bij de halte aan de overkant op de bus die je weer terugbrengt naar de juiste halte. Heb je een afspraak, laat dan even weten dat je bent verlaat.\n\nZit je op de snelweg, dan is het niet mogelijk om terug te lopen. Stap dan alsnog uit bij de volgende halte en plan dán een nieuwe route via [9292.nl](http://9292.nl/). \n",
+    "children": [],
+    "parent": 8
+  },
+  {
+    "id": 21,
+    "title": "De buschauffeur volgt niet de standaard route. Wat nu?",
+    "content": "Allereerst is het belangrijk om niet in paniek te raken. het kan gebeuren dat je chauffeur afwijkt van de standaard route vanwege wegwerkzaamheden of iets vergelijkbaars. Vaak wordt dit van te voren aangegeven op de website van je vervoerder. [9292.nl](http://9292.nl/) houdt dit vaak ook bij. Ook kun je ten allen tijde naar de buschauffeur stappen en vragen waarom hij een andere route rijdt. Lukt dit niet, stap je het best uit bij de volgende halte en plan je een nieuwe route op [9292.nl](http://9292.nl/). Neem ook even contact op met je [contactpersoon](tel:$CONTACTPERSOON) en laat weten dat je later bent als je een afspraak hebt.",
+    "children": [],
+    "parent": 8
+  },
+  {
+    "id": 22,
+    "title": "Ik heb vragen over mijn ov-chipkaart.",
+    "content": "Wat wil je weten?\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)",
+    "children": [
+      23,
+      30
+    ],
+    "parent": 0
+  },
+  {
+    "id": 23,
+    "title": "Je vraagt je af of je voldoende saldo hebt. ",
+    "content": "Het minimum instaptarief voor de bus is 4 euro, voor Qliner en trein van Arriva 10 euro en voor de trein van NS 20 euro. Als je in hebt kunnen checken, dan weet je zeker dat je ook uit kunt checken. Het kan wel zijn dat je meer moet betalen dan dat er op je ov-chipkaart staat. Dit is niet erg. Het enige wat je vóór de volgende keer moet doen, is je saldo opladen.\nDit kun je doen op verschillende plekken. Voor een oplaadpunt bij jouw in de buurt kijk je op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)\n",
+    "children": [],
+    "parent": 22
+  },
+  {
+    "id": 24,
+    "title": "Je bus komt niet",
+    "content": "Het eerste wat je kunt doen, is kijken op [9292.nl](http://9292.nl/) om te zien of er een storing is. Is deze er niet, dan kan het zijn dat je bus al langs is geweest. Plan alvast een volgende reis in. Heb je een afspraak met iemand? Zorg dan dat je diegene op de hoogte stelt.",
+    "children": [],
+    "parent": 18
+  },
+  {
+    "id": 25,
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
+    "children": [],
+    "parent": 18
+  },
+  {
+    "id": 26,
+    "title": "Er zit een zak over het haltebord heen",
+    "content": "Het kan voorkomen dat een route wordt aangepast vanwege werkzaamheden of iets vergelijkbaars. Vaak laat de busdienst dit weten door een witte zak over het haltebord te plaatsen. Hierop staat onder andere tot wanneer de halte is vervallen. Om een nieuwe reis te plannen, ga je naar [9292.nl](http://9292.nl/). Deze geeft alternatieven aan als je op een adres zoekt. ",
+    "children": [],
+    "parent": 12
+  },
+  {
+    "id": 27,
+    "title": "Waar kan ik vinden waar en wanneer mijn trein aankomt.",
+    "content": "Op ieder station staan borden waarop de perrons en de treintijden staan aangegeven. Hier kun je opzoeken hoe laat je trein vertrekt en van welk perron.\n\nOp grote treinstations zijn vaak informatiekiosken te vinden. Hier kun je vragen stellen over jouw reis. ",
+    "children": [],
+    "parent": 13
+  },
+  {
+    "id": 28,
+    "title": "Ik heb last van de drukte",
+    "content": "Stations zijn vaak knooppunten voor reizigers en kunnen dus heel druk zijn. Focus je op de zaken die er toe doen, namelijk: waar moet je naartoe en waar haal je je informatie vandaan als je dit niet weet. \n\nSta je eenmaal op de juiste plek, sluit je even af van de mensen om je heen en zet bijvoorbeeld even een muziekje op. Zet je muziek niet op de hoogste volume-stand, want je wilt eventuele omroepberichten niet missen",
+    "children": [],
+    "parent": 13
+  },
+  {
+    "id": 29,
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
+    "children": [],
+    "parent": 8
+  },
+  {
+    "id": 30,
+    "title": "Hoe moet ik inchecken en uitchecken met mijn OV-Chipkaart?",
+    "content": "Waar in wil je inchecken?",
+    "children": [
+      31,
+      32
+    ],
+    "parent": 22
+  },
+  {
+    "id": 31,
+    "title": "Bus",
+    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. In de bus doe je dit wanneer je instapt. Bij elke deur van de bus zit een ov-chipkast; hier kan je zowel in- als uitchecken. Je presenteert je pas voor het kastje en wacht tot je een piep hoort; de ov-chipkast geeft meteen aan of het wel of niet gelukt is. Wanneer het gelukt is kun je gaan zitten. Wanneer het niet gelukt is, kun je de chauffeur om hulp vragen. Denk erom dat je niet vergeet uit te checken wanneer je de bus verlaat. \n",
+    "children": [],
+    "parent": 30
+  },
+  {
+    "id": 32,
+    "title": "Trein",
+    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. Belangrijk hierbij is dat je erop let bij welke vervoerder je incheckt. Arriva en NS hebben allebei eigen in- en uitcheck-paaltjes of -poortjes. Je kunt aan het logo en de kleur zien van welke vervoerder het paaltje of poortje is. Check altijd in en uit bij de vervoerder waarmee je reist. Let daarbij op dat je voor een poortje kiest met een groene pijl erop. Poortjes met een rood kruis erop zijn buiten werking. Als je bij het overstappen wisselt van vervoerder, let er dan op dat je uitcheckt bij de ene vervoerder en weer incheckt bij de andere vervoerder. Blijf je bij het overstappen reizen met dezelfde vervoerder? Check dan pas uit op je eindstation. ",
+    "children": [],
+    "parent": 30
+  },
+  {
+    "id": 33,
+    "title": "Wanneer moet ik uitstappen?",
+    "content": "Je hebt van te voren je reis gepland en je weet bij welke plaats je moet uitstappen. In de trein wordt per station omgeroepen waar de trein zich op dat moment (bijna) bevindt. Wanneer jouw eindstation omgeroepen wordt, loop je het best alvast naar de deur want je bent er dan bijna. Wacht tot de trein stilstaat en druk dan op de knop om de deur te openen en uit te stappen.\n",
+    "children": [],
+    "parent": 9
+  },
+  {
+    "id": 34,
+    "title": "Ik ben vergeten in te checken.",
+    "content": "Als je vergeten bent in te checken, kun je het beste bij het eerstvolgende station uitstappen om alsnog in te checken. Wanneer je namelijk niet bent ingecheckt bij controle, staat hier een boete tegenover. Neem wanneer je uitstapt om alsnog in te checken wel je bagage mee, want het kan zijn dat het je niet op tijd lukt om weer opnieuw in te stappen. Is dat het geval? Plan je reis dan opnieuw via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent. \n",
+    "children": [],
+    "parent": 9
+  },
+  {
+    "id": 35,
+    "title": "De trein heeft vertraging of een storing.",
+    "content": "Het kan gebeuren dat de trein een paar minuten later komt of een storing heeft. Vaak wordt op het informatiebord (deze hangt bij het perron waar je moet zijn) aangegeven wanneer een trein vertraging heeft en hoeveel minuten. Is er geen informatiebord of duurt het erg lang? Dan kun je kijken op [9292.nl](http://9292.nl/) om te kijken of daar meer informatie te vinden is over je reis. Loopt de trein waar je in zit vertraging op? Blijf dan rustig zitten en luister goed naar de instructies van het personeel. Zij vertellen je hoe lang de vertraging of storing naar verwachting duurt en wat je kunt doen als de trein het niet meer doet. Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.\n",
+    "children": [],
+    "parent": 9
+  },
+  {
+    "id": 36,
+    "title": "Waar kan ik gaan zitten? ",
+    "content": "Overal waar nog een plek vrij is, kan je gaan zitten. Dit kan op een stoel in de wagon zijn of op een klapstoeltje dichtbij de deur. Wanneer het wat drukker is in de trein en er is alleen nog een plekje vrij naast iemand anders, dan is het beleefd om te vragen of je daar mag gaan zitten. Meestal is dit geen probleem. Let er wel goed op dat de trein is verdeeld in een 1e en een 2e klas. 2e klas is een standaard kaartje en als je in de 1e klas wilt zitten dan betaal je extra. De 1e klas word aangegeven met een 1, de 2e klas met een 2. Ook hebben de stoelen vaak verschillende kleuren.",
+    "children": [],
+    "parent": 9
+  },
+  {
+    "id": 37,
+    "title": "Er is geen plek meer.",
+    "content": "Wanneer er geen plek meer is om te gaan zitten, dan zoek je een plaats op waar je veilig kunt gaan staan. Is de trein overvol en staan er al veel mensen in het gangpad? Loop dan even door naar een andere ingang. Als het daar ook vol is, dan is het misschien handig om op de volgende trein te wachten. Plan in dat geval een nieuwe reis via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent. \n",
+    "children": [],
+    "parent": 9
+  }
+]

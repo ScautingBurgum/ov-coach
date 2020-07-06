@@ -5,15 +5,19 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "fix": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
-
+    "fix": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p",
+    "prep": "node assets/audio/prepareAudio.js"
   },
   "dependencies": {
-    "expo": "^31.0.2",
+    "babel-plugin-wildcard": "^5.0.0",
+    "expo": "^34.0.1",
+    "expo-av": "^6.0.0",
+    "expo-file-system": "^6.0.2",
     "punycode": "^2.1.1",
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "^0.57.7",
-    "react-native-markdown-renderer": "^3.2.8"
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-markdown-renderer": "^3.2.8",
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
