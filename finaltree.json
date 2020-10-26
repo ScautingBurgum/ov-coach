@@ -5,7 +5,8 @@
     "content": "Welkom bij de OV-Reiscoach! Waarover heb je een vraag?",
     "children": [
       1,
-      22
+      22,
+      38
     ],
     "parent": null
   },
@@ -113,13 +114,13 @@
   {
     "id": 15,
     "title": "Niet gelukt",
-    "content": "Bel je [contactpersoon](tel:$CONTACTPERSOON)",
+    "content": "Bel je [contactpersoon](tel:$CONTACTPERSOON).",
     "children": [],
     "parent": 5
   },
   {
     "id": 18,
-    "title": "De bus is te laat.",
+    "title": "De bus is te laat",
     "content": "Het kan natuurlijk gebeuren dat een bus een paar minuten te laat komt, als de bus erg laat is kun je op [9292.nl](http://9292.nl/) kijken of deze nog komt en hoe laat deze komt.",
     "children": [
       24,
@@ -136,8 +137,8 @@
   },
   {
     "id": 20,
-    "title": "Ik heb mijn halte gemist.",
-    "content": "Geen nood, dat kan gebeuren. Het eerste wat je doet is op de stop-knop drukken zodat de bus stopt bij de volgende halte. Vaak is de deze halte op loopafstand en kan je gewoon terug lopen naar de halte waar je moet zijn. Is de volgende halte te ver verwijdert, dan wacht je bij de halte aan de overkant op de bus die je weer terugbrengt naar de juiste halte. Heb je een afspraak, laat dan even weten dat je bent verlaat.\n\nZit je op de snelweg, dan is het niet mogelijk om terug te lopen. Stap dan alsnog uit bij de volgende halte en plan dán een nieuwe route via [9292.nl](http://9292.nl/). \n",
+    "title": "Ik heb mijn halte gemist",
+    "content": "Geen nood, dat kan gebeuren. Het eerste wat je doet is op de stop-knop drukken zodat de bus stopt bij de volgende halte. Vaak is de deze halte op loopafstand en kan je gewoon terug lopen naar de halte waar je moet zijn. Is de volgende halte te ver verwijdert, dan wacht je bij de halte aan de overkant op de bus die je weer terugbrengt naar de juiste halte. Heb je een afspraak, laat dan even weten dat je bent verlaat.\n\nZit je op de snelweg, dan is het niet mogelijk om terug te lopen. Stap dan alsnog uit bij de volgende halte en plan dán een nieuwe route via [9292.nl](http://9292.nl/).\n",
     "children": [],
     "parent": 8
   },
@@ -150,8 +151,8 @@
   },
   {
     "id": 22,
-    "title": "Ik heb vragen over mijn ov-chipkaart.",
-    "content": "Wat wil je weten?\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)",
+    "title": "Ik heb vragen over mijn ov-chipkaart",
+    "content": "Wat wil je weten?\nStaat jouw vraag er niet bij? Kijk dan op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/).",
     "children": [
       23,
       30
@@ -160,8 +161,8 @@
   },
   {
     "id": 23,
-    "title": "Je vraagt je af of je voldoende saldo hebt. ",
-    "content": "Het minimum instaptarief voor de bus is 4 euro, voor Qliner en trein van Arriva 10 euro en voor de trein van NS 20 euro. Als je in hebt kunnen checken, dan weet je zeker dat je ook uit kunt checken. Het kan wel zijn dat je meer moet betalen dan dat er op je ov-chipkaart staat. Dit is niet erg. Het enige wat je vóór de volgende keer moet doen, is je saldo opladen.\nDit kun je doen op verschillende plekken. Voor een oplaadpunt bij jouw in de buurt kijk je op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/)\n",
+    "title": "Je vraagt je af of je voldoende saldo hebt",
+    "content": "Het minimum instaptarief voor de bus is 4 euro, voor Qliner en trein van Arriva 10 euro en voor de trein van NS 20 euro. Als je in hebt kunnen checken, dan weet je zeker dat je ook uit kunt checken. Het kan wel zijn dat je meer moet betalen dan dat er op je ov-chipkaart staat. Dit is niet erg. Het enige wat je vóór de volgende keer moet doen, is je saldo opladen.\nDit kun je doen op verschillende plekken. Voor een oplaadpunt bij jouw in de buurt kijk je op [www.ov-chipkaart.nl](https://www.ov-chipkaart.nl/).\n",
     "children": [],
     "parent": 22
   },
@@ -174,7 +175,7 @@
   },
   {
     "id": 25,
-    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen",
     "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
     "children": [],
     "parent": 18
@@ -182,27 +183,27 @@
   {
     "id": 26,
     "title": "Er zit een zak over het haltebord heen",
-    "content": "Het kan voorkomen dat een route wordt aangepast vanwege werkzaamheden of iets vergelijkbaars. Vaak laat de busdienst dit weten door een witte zak over het haltebord te plaatsen. Hierop staat onder andere tot wanneer de halte is vervallen. Om een nieuwe reis te plannen, ga je naar [9292.nl](http://9292.nl/). Deze geeft alternatieven aan als je op een adres zoekt. ",
+    "content": "Het kan voorkomen dat een route wordt aangepast vanwege werkzaamheden of iets vergelijkbaars. Vaak laat de busdienst dit weten door een witte zak over het haltebord te plaatsen. Hierop staat onder andere tot wanneer de halte is vervallen. Om een nieuwe reis te plannen, ga je naar [9292.nl](http://9292.nl/). Deze geeft alternatieven aan als je op een adres zoekt.",
     "children": [],
     "parent": 12
   },
   {
     "id": 27,
-    "title": "Waar kan ik vinden waar en wanneer mijn trein aankomt.",
-    "content": "Op ieder station staan borden waarop de perrons en de treintijden staan aangegeven. Hier kun je opzoeken hoe laat je trein vertrekt en van welk perron.\n\nOp grote treinstations zijn vaak informatiekiosken te vinden. Hier kun je vragen stellen over jouw reis. ",
+    "title": "Waar kan ik vinden waar en wanneer mijn trein aankomt?",
+    "content": "Op ieder station staan borden waarop de perrons en de treintijden staan aangegeven. Hier kun je opzoeken hoe laat je trein vertrekt en van welk perron.\n\nOp grote treinstations zijn vaak informatiekiosken te vinden. Hier kun je vragen stellen over jouw reis.",
     "children": [],
     "parent": 13
   },
   {
     "id": 28,
     "title": "Ik heb last van de drukte",
-    "content": "Stations zijn vaak knooppunten voor reizigers en kunnen dus heel druk zijn. Focus je op de zaken die er toe doen, namelijk: waar moet je naartoe en waar haal je je informatie vandaan als je dit niet weet. \n\nSta je eenmaal op de juiste plek, sluit je even af van de mensen om je heen en zet bijvoorbeeld even een muziekje op. Zet je muziek niet op de hoogste volume-stand, want je wilt eventuele omroepberichten niet missen",
+    "content": "Stations zijn vaak knooppunten voor reizigers en kunnen dus heel druk zijn. Focus je op de zaken die er toe doen, namelijk: waar moet je naartoe en waar haal je je informatie vandaan als je dit niet weet. \n\nSta je eenmaal op de juiste plek, sluit je even af van de mensen om je heen en zet bijvoorbeeld even een muziekje op. Zet je muziek niet op de hoogste volume-stand, want je wilt eventuele omroepberichten niet missen.",
     "children": [],
     "parent": 13
   },
   {
     "id": 29,
-    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen.",
+    "title": "Mijn bus is te laat en daardoor kan ik mijn overstap missen",
     "content": "Weet je niet zeker of je je overstap gaat redden? Vraag het de buschauffeur. Hij kan altijd contact opnemen met zijn collega in de andere bus of het mogelijk is dat deze even wacht. Kan dat niet, plan dan een nieuwe reis in via [9292.nl](http://9292.nl/). Kom je hierdoor te laat voor een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.",
     "children": [],
     "parent": 8
@@ -220,14 +221,14 @@
   {
     "id": 31,
     "title": "Bus",
-    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. In de bus doe je dit wanneer je instapt. Bij elke deur van de bus zit een ov-chipkast; hier kan je zowel in- als uitchecken. Je presenteert je pas voor het kastje en wacht tot je een piep hoort; de ov-chipkast geeft meteen aan of het wel of niet gelukt is. Wanneer het gelukt is kun je gaan zitten. Wanneer het niet gelukt is, kun je de chauffeur om hulp vragen. Denk erom dat je niet vergeet uit te checken wanneer je de bus verlaat. \n",
+    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. In de bus doe je dit wanneer je instapt. Bij elke deur van de bus zit een ov-chipkast; hier kan je zowel in- als uitchecken. Je presenteert je pas voor het kastje en wacht tot je een piep hoort; de ov-chipkast geeft meteen aan of het wel of niet gelukt is. Wanneer het gelukt is kun je gaan zitten. Wanneer het niet gelukt is, kun je de chauffeur om hulp vragen. Denk erom dat je niet vergeet uit te checken wanneer je de bus verlaat.\n",
     "children": [],
     "parent": 30
   },
   {
     "id": 32,
     "title": "Trein",
-    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. Belangrijk hierbij is dat je erop let bij welke vervoerder je incheckt. Arriva en NS hebben allebei eigen in- en uitcheck-paaltjes of -poortjes. Je kunt aan het logo en de kleur zien van welke vervoerder het paaltje of poortje is. Check altijd in en uit bij de vervoerder waarmee je reist. Let daarbij op dat je voor een poortje kiest met een groene pijl erop. Poortjes met een rood kruis erop zijn buiten werking. Als je bij het overstappen wisselt van vervoerder, let er dan op dat je uitcheckt bij de ene vervoerder en weer incheckt bij de andere vervoerder. Blijf je bij het overstappen reizen met dezelfde vervoerder? Check dan pas uit op je eindstation. ",
+    "content": "Wanneer je weet dat je voldoende saldo op je ov-chipkaart hebt, kun je gaan inchecken. Belangrijk hierbij is dat je erop let bij welke vervoerder je incheckt. Arriva en NS hebben allebei eigen in- en uitcheck-paaltjes of -poortjes. Je kunt aan het logo en de kleur zien van welke vervoerder het paaltje of poortje is. Check altijd in en uit bij de vervoerder waarmee je reist. Let daarbij op dat je voor een poortje kiest met een groene pijl erop. Poortjes met een rood kruis erop zijn buiten werking. Als je bij het overstappen wisselt van vervoerder, let er dan op dat je uitcheckt bij de ene vervoerder en weer incheckt bij de andere vervoerder. Blijf je bij het overstappen reizen met dezelfde vervoerder? Check dan pas uit op je eindstation.",
     "children": [],
     "parent": 30
   },
@@ -241,7 +242,7 @@
   {
     "id": 34,
     "title": "Ik ben vergeten in te checken.",
-    "content": "Als je vergeten bent in te checken, kun je het beste bij het eerstvolgende station uitstappen om alsnog in te checken. Wanneer je namelijk niet bent ingecheckt bij controle, staat hier een boete tegenover. Neem wanneer je uitstapt om alsnog in te checken wel je bagage mee, want het kan zijn dat het je niet op tijd lukt om weer opnieuw in te stappen. Is dat het geval? Plan je reis dan opnieuw via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent. \n",
+    "content": "Als je vergeten bent in te checken, kun je het beste bij het eerstvolgende station uitstappen om alsnog in te checken. Wanneer je namelijk niet bent ingecheckt bij controle, staat hier een boete tegenover. Neem wanneer je uitstapt om alsnog in te checken wel je bagage mee, want het kan zijn dat het je niet op tijd lukt om weer opnieuw in te stappen. Is dat het geval? Plan je reis dan opnieuw via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.\n",
     "children": [],
     "parent": 9
   },
@@ -262,8 +263,49 @@
   {
     "id": 37,
     "title": "Er is geen plek meer.",
-    "content": "Wanneer er geen plek meer is om te gaan zitten, dan zoek je een plaats op waar je veilig kunt gaan staan. Is de trein overvol en staan er al veel mensen in het gangpad? Loop dan even door naar een andere ingang. Als het daar ook vol is, dan is het misschien handig om op de volgende trein te wachten. Plan in dat geval een nieuwe reis via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent. \n",
+    "content": "Wanneer er geen plek meer is om te gaan zitten, dan zoek je een plaats op waar je veilig kunt gaan staan. Is de trein overvol en staan er al veel mensen in het gangpad? Loop dan even door naar een andere ingang. Als het daar ook vol is, dan is het misschien handig om op de volgende trein te wachten. Plan in dat geval een nieuwe reis via [9292.nl](http://9292.nl/) Kom je hierdoor te laat op een afspraak? Neem dan even contact op om aan te geven dat je verlaat bent.\n",
     "children": [],
     "parent": 9
+  },
+  {
+    "id": 38,
+    "title": "Ik heb een vraag over mijn Voor Elkaar Pas",
+    "content": "Wat is je vraag?",
+    "children": [
+      39,
+      40
+    ],
+    "parent": 0 
+  },
+  {
+    "id": 39,
+    "title": "Hoe moet ik inchecken en uitchecken met mijn Voor Elkaar Pas?",
+    "content": "Waar wil je inchecken?",
+    "children": [
+      41,
+      42
+    ],
+    "parent": 38 
+  },
+  {
+    "id": 40,
+    "title": "Het inchecken of uitchecken lukt niet",
+    "content": "Als je pas niet goed werkt, kun je dit aangeven bij de chauffeur in de bus of steward in de trein. Je mag gewoon meereizen. Laat je ouders of werkgever na thuiskomst aan de gemeente doorgeven dat je pas niet goed werkt. Er wordt dan een nieuwe pas voor je geregeld.",
+    "children": [],
+    "parent": 38 
+  },
+  {
+    "id": 41,
+    "title": "Bus",
+    "content": "Wanneer je weet dat je voldoende saldo op je Voor Elkaar Pas hebt, kun je gaan inchecken. In de bus doe je dit wanneer je instapt. Bij elke deur van de bus zit een ov-chipkast; hier kan je zowel in- als uitchecken. Je presenteert je pas voor het kastje en wacht tot je een piep hoort; de ov-chipkast geeft meteen aan of het wel of niet gelukt is. Wanneer het gelukt is kun je gaan zitten. Wanneer het niet gelukt is, kun je de chauffeur om hulp vragen. Denk erom dat je niet vergeet uit te checken wanneer je de bus verlaat.\n",
+    "children": [],
+    "parent": 39
+  },
+  {
+    "id": 42,
+    "title": "Trein",
+    "content": "Wanneer je weet dat je voldoende saldo op je Voor Elkaar Pas hebt, kun je gaan inchecken. Belangrijk hierbij is dat je erop let bij welke vervoerder je incheckt. Arriva en NS hebben allebei eigen in- en uitcheck-paaltjes of -poortjes. Je kunt aan het logo en de kleur zien van welke vervoerder het paaltje of poortje is. Check altijd in en uit bij de vervoerder waarmee je reist. Let daarbij op dat je voor een poortje kiest met een groene pijl erop. Poortjes met een rood kruis erop zijn buiten werking. Als je bij het overstappen wisselt van vervoerder, let er dan op dat je uitcheckt bij de ene vervoerder en weer incheckt bij de andere vervoerder. Blijf je bij het overstappen reizen met dezelfde vervoerder? Check dan pas uit op je eindstation.",
+    "children": [],
+    "parent": 39
   }
 ]
