@@ -6,7 +6,8 @@
     "children": [
       1,
       22,
-      38
+      38,
+      43
     ],
     "parent": null
   },
@@ -307,5 +308,12 @@
     "content": "Wanneer je weet dat je voldoende saldo op je Voor Elkaar Pas hebt, kun je gaan inchecken. Belangrijk hierbij is dat je erop let bij welke vervoerder je incheckt. Arriva en NS hebben allebei eigen in- en uitcheck-paaltjes of -poortjes. Je kunt aan het logo en de kleur zien van welke vervoerder het paaltje of poortje is. Check altijd in en uit bij de vervoerder waarmee je reist. Let daarbij op dat je voor een poortje kiest met een groene pijl erop. Poortjes met een rood kruis erop zijn buiten werking. Als je bij het overstappen wisselt van vervoerder, let er dan op dat je uitcheckt bij de ene vervoerder en weer incheckt bij de andere vervoerder. Blijf je bij het overstappen reizen met dezelfde vervoerder? Check dan pas uit op je eindstation.",
     "children": [],
     "parent": 39
+  },
+  {
+    "id": 43,
+    "title": "Wat zijn de regels betreffende corona voor het openbaar vervoer?",
+    "content": " 1: Vermijd drukte op en rond stations en haltes.\n 2: Volg de basisregels die voor iedereen gelden.\n 3: Houd 1,5 meter afstand.\n 4: Mondkapje op in de bus of trein.\n 5: Eten of drinken zoveel mogelijk voor of na de reis.\n 6: Reis buiten de spits.\n 7: Neem extra tijd voor je reis.",
+    "children": [],
+    "parent": 0
   }
 ]
